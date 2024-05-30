@@ -1,6 +1,6 @@
-import { useState } from "react";
-
 import { cn } from "@/utils/cn";
+import { BackgroundGradientAnimation } from "./GradientBg";
+import GridGlobe from "./GridGlobe";
 
 export const BentoGrid = ({
   className,
@@ -58,7 +58,7 @@ export const BentoGridItem = ({
             <img
               src={img}
               alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
+              className={cn(imgClassName, "object-cover object-center")}
             />
           )}
         </div>
@@ -75,6 +75,11 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+        {id === 6 && (
+          <BackgroundGradientAnimation>
+            <div className="absolute z-50 flex items-center justify-center text-white font-bold" />
+          </BackgroundGradientAnimation>
+        )}
         <div
           className={cn(
             titleClassName,
@@ -90,6 +95,8 @@ export const BentoGridItem = ({
             {title}
           </div>
         </div>
+
+        {id === 2 && <GridGlobe />}
       </div>
     </div>
   );
