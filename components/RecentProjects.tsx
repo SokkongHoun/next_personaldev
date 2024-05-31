@@ -4,10 +4,6 @@ import { PinContainer } from "./ui/3d-pin";
 import { FaLocationArrow } from "react-icons/fa6";
 
 const RecentProjects = () => {
-  const handletest = () => {
-    console.log("hello");
-  };
-
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
@@ -23,7 +19,7 @@ const RecentProjects = () => {
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
           >
-            <PinContainer title={title} href={link}>
+            <PinContainer title="Visit" href={link}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden mb-10 sm:h-[40vh] h-[30vh]">
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <img src="/bg.png" alt="bg-img" />
